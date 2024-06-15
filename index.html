@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic signal</title>
+    <style>
+        .rounds {
+            width: 100px;
+            height: 100px;
+            background-color: #e9e6e6;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            background-color: black;
+            width: 100px;
+            border-radius: 30px;
+            padding: 25px;
+
+        }
+
+        .containerlg {
+            display: flex;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* margin-top:20px; */
+            margin-bottom: 10px;
+            /* background-color: black; */
+            padding: 25px;
+
+
+
+
+        }
+
+        .button {
+            width: 100px;
+            height: 40px;
+            margin-top: 50px;
+            border-radius: 5px;
+
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center;">
+        <h1>Traffic Signals</h1>
+    </div>
+    <div class="card">
+
+        <div class="containerlg">
+            <div class="container">
+                <div id="grn" class="rounds"></div>
+                <div id="yel" class="rounds"></div>
+                <div id="red" class="rounds"></div>
+            </div>
+            <div class="buttons">
+                <button id="grbtn" onclick="green()" class="button">green</button>
+                <button id="yelbtn" onclick="yellow()" class="button">yellow</button>
+                <button id="redbtn" onclick="red()" class="button">red</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function green() {
+            document.getElementById('grn').style.backgroundColor = "green";
+            document.getElementById('grbtn').style.backgroundColor = "green";
+            document.getElementById('yel').style.backgroundColor = "#e9e6e6";
+            document.getElementById('yelbtn').style.backgroundColor = "#e9e6e6";
+            document.getElementById('red').style.backgroundColor = "#e9e6e6";
+            document.getElementById('redbtn').style.backgroundColor = "#e9e6e6";
+        }
+        function yellow() {
+            document.getElementById('yel').style.backgroundColor = "yellow";
+            document.getElementById('yelbtn').style.backgroundColor = "yellow";
+            document.getElementById('grn').style.backgroundColor = "#e9e6e6";
+            document.getElementById('grbtn').style.backgroundColor = "#e9e6e6";
+            document.getElementById('red').style.backgroundColor = "#e9e6e6";
+            document.getElementById('redbtn').style.backgroundColor = "#e9e6e6";
+        }
+        function red() {
+            document.getElementById('red').style.backgroundColor = "red";
+            document.getElementById('redbtn').style.backgroundColor = "red";
+            document.getElementById('yel').style.backgroundColor = "#e9e6e6";
+            document.getElementById('yelbtn').style.backgroundColor = "#e9e6e6";
+            document.getElementById('grn').style.backgroundColor = "#e9e6e6";
+            document.getElementById('grbtn').style.backgroundColor = "#e9e6e6";
+        }
+
+    </script>
+</body>
+
+</html>
